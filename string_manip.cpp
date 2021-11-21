@@ -1,10 +1,18 @@
 #include "string_manip.hpp"
+#include <cstdarg>
 
 std::size_t count(const std::string& s, char c) {
     std::size_t result = 0;
     for (char ch : s) {
         if (c == ch) ++result;
     }
+    return result;
+}
+
+std::string new_sscanf(const std::string& s, ... ) {
+    std::string result;
+    va_list args;
+    vsscanf(result.c_str(), s.c_str(), args);
     return result;
 }
 
