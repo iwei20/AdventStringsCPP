@@ -11,6 +11,17 @@ std::size_t manip::count(const std::string& s, char c) {
     return result;
 }
 
+constexpr long long ALPHABET_SIZE = 256;
+long long manip::hash_str(const std::string& s, const long long modulo) {
+    long long result = 0;
+    for (char c : s) {
+        result *= ALPHABET_SIZE;
+        result %= modulo;
+        result += (long long)c;
+    }
+    return result;
+}
+
 std::string manip::slice(
         const std::string& s, 
         const std::optional<int>& start, 
