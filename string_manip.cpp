@@ -44,7 +44,7 @@ std::string manip::slice(
 
     int slicelength;
     if ((m_step < 0 && m_stop >= m_start) || 
-        (m_step > 0 && m_stop <= m_stop)) {
+        (m_step > 0 && m_stop <= m_start)) {
         slicelength = 0;
     } else if (m_step < 0) {
         slicelength = (m_stop - m_start + 1) / (m_step) + 1;
