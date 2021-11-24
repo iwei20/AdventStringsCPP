@@ -68,9 +68,9 @@ namespace smanip {
 }
 
 namespace misc {
-    std::ostream& operator<<(std::ostream& out, std::vector<char>& v);
-    std::ostream& operator<<(std::ostream& out, std::vector<int>& v);
-    std::ostream& operator<<(std::ostream& out, std::vector<double>& v);
-    std::ostream& operator<<(std::ostream& out, std::vector<long long>& v);
-    std::ostream& operator<<(std::ostream& out, std::vector<std::string>& v);
+    template <typename T>
+    std::string vtos(const std::vector<T>& v, std::string& delimiter);
+
+    template <typename T>
+    std::ostream& operator<<(std::ostream& out, const std::vector<T>& v);
 }
