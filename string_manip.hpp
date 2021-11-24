@@ -15,7 +15,7 @@ namespace manip {
     std::size_t count(const std::string& s, const std::string& substr);
 
     int hash_str(const std::string& s);
-    std::vector<int> hash_all_substr(const std::string& s, std::size_t n);
+    std::vector<int> hash_rolling(const std::string& s, std::size_t n);
 
     void replace_inplace(
         std::string& s, 
