@@ -65,6 +65,9 @@ namespace smanip {
         const std::optional<int>& stop, 
         const std::optional<int>& step);
 
+}
+
+namespace misc {
     std::ostream& operator<<(std::ostream& out, std::vector<char>& v);
     std::ostream& operator<<(std::ostream& out, std::vector<int>& v);
     std::ostream& operator<<(std::ostream& out, std::vector<double>& v);
