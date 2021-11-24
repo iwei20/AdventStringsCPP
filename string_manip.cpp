@@ -49,7 +49,7 @@ std::string manip::slice(
     } else if (m_step < 0) {
         slicelength = (m_stop - m_start + 1) / (m_step) + 1;
     } else {
-        slicelength = (m_stop - m_start - 1)/ (m_step) + 1;
+        slicelength = (m_stop - m_start - 1) / (m_step) + 1;
     }
 
     if (slicelength <= 0) {
