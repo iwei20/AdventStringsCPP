@@ -9,13 +9,6 @@ std::size_t manip::count(const std::string& s, char c) {
     return result;
 }
 
-std::string manip::wrap_sscanf(const std::string& s, ... ) {
-    std::string result;
-    va_list args;
-    vsscanf(result.c_str(), s.c_str(), args);
-    return result;
-}
-
 std::string manip::slice(const std::string& s, const std::size_t start, const std::size_t stop, const std::size_t step) {
 
     std::string result = "";
@@ -32,4 +25,5 @@ std::string manip::slice(const std::string& s, const std::size_t start, const st
             result += s[i];
         }
     }
+    return result;
 }

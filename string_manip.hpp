@@ -58,6 +58,5 @@ namespace manip {
     void rpad_inplace(std::string& s, char c, const std::size_t n);
     std::string rpad(const std::string& s, char c, const std::size_t n);
 
-    std::string wrap_sscanf(const std::string& s, ... );
     std::string slice(const std::string& s, const std::size_t start = 0, const std::size_t stop = -1, const std::size_t step = 1);
 }
