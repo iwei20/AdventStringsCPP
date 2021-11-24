@@ -64,4 +64,10 @@ namespace manip {
         const std::optional<int>& start, 
         const std::optional<int>& stop, 
         const std::optional<int>& step);
+
+    std::ostream& operator<<(std::ostream& out, std::vector<char>& v);
+    std::ostream& operator<<(std::ostream& out, std::vector<int>& v);
+    std::ostream& operator<<(std::ostream& out, std::vector<double>& v);
+    std::ostream& operator<<(std::ostream& out, std::vector<long long>& v);
+    std::ostream& operator<<(std::ostream& out, std::vector<std::string>& v);
 }
