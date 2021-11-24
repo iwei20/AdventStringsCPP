@@ -22,6 +22,17 @@ long long manip::hash_str(const std::string& s, const long long modulo) {
     return result;
 }
 
+std::vector<long long> hash_rolling(const std::string& s, const long long modulo = 1e9 + 9) {
+    std::vector<long long> result(s.size());
+    result[0] = s[0] % modulo;
+    for (std::size_t i = 1; i < s.size(); ++i) {
+        result[i] = result[i - 1] * ALPHABET_SIZE;
+        result[i] %= modulo;
+        result[i] += (long long)s[i];
+    }
+    return result;
+}
+
 std::string manip::slice(
         const std::string& s, 
         const std::optional<int>& start, 
