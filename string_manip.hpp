@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <optional>
 
 namespace manip { 
     /**
@@ -58,5 +59,9 @@ namespace manip {
     void rpad_inplace(std::string& s, char c, const std::size_t n);
     std::string rpad(const std::string& s, char c, const std::size_t n);
 
-    std::string slice(const std::string& s, const std::size_t start = 0, const std::size_t stop = -1, const std::size_t step = 1);
+    std::string slice(
+        const std::string& s, 
+        const std::optional<int>& start, 
+        const std::optional<int>& stop, 
+        const std::optional<int>& step);
 }
