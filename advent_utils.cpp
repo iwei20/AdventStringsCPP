@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector>
 
-std::size_t manip::count(const std::string& s, char c) {
+std::size_t smanip::count(const std::string& s, char c) {
     std::size_t result = 0;
     for (char ch : s) {
         if (c == ch) ++result;
@@ -12,7 +12,7 @@ std::size_t manip::count(const std::string& s, char c) {
 }
 
 constexpr long long ALPHABET_SIZE = 256;
-long long manip::hash_str(const std::string& s, const long long modulo) {
+long long smanip::hash_str(const std::string& s, const long long modulo) {
     long long result = 0;
     for (char c : s) {
         result *= ALPHABET_SIZE;
@@ -33,7 +33,7 @@ std::vector<long long> hash_rolling(const std::string& s, const long long modulo
     return result;
 }
 
-std::string manip::slice(
+std::string smanip::slice(
         const std::string& s, 
         const std::optional<int>& start, 
         const std::optional<int>& stop, 

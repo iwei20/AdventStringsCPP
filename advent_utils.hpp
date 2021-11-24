@@ -3,7 +3,7 @@
 #include <vector>
 #include <optional>
 
-namespace manip { 
+namespace smanip { 
     /**
      * @brief Counts the number of occurrences of a character in a string.
      * 
