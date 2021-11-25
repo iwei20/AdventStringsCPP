@@ -23,7 +23,7 @@ long long smanip::hash_str(const std::string& s, const long long modulo) {
     return result;
 }
 
-std::vector<long long> hash_rolling(const std::string& s, const long long modulo = 1e9 + 9) {
+std::vector<long long> smanip::hash_rolling(const std::string& s, const long long modulo) {
     std::vector<long long> result(s.size());
     result[0] = s[0] % modulo;
     for (std::size_t i = 1; i < s.size(); ++i) {
