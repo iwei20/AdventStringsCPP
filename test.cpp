@@ -41,4 +41,6 @@ int main() {
     cout << test1 << "\n";
     cout << test0 << "\n";
     cout << testd << "\n";
+
+    cout << smanip::hash_rolling("OKOKOKOK") << "\n";
 }
