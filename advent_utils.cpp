@@ -126,3 +126,15 @@ template std::string vtos(const std::vector<char>& v, const std::string& delimit
 template std::string vtos(const std::vector<double>& v, const std::string& delimiter);
 template std::string vtos(const std::vector<long long>& v, const std::string& delimiter);
 template std::string vtos(const std::vector<std::string>& v, const std::string& delimiter);
+
+template <typename T>
+std::ostream& operator<<(std::ostream& out, const std::vector<T>& v) {
+    out << vtos(v, " ");
+    return out;
+}
+
+template std::ostream& operator<<(std::ostream& out, const std::vector<int>& v);
+template std::ostream& operator<<(std::ostream& out, const std::vector<char>& v);
+template std::ostream& operator<<(std::ostream& out, const std::vector<double>& v);
+template std::ostream& operator<<(std::ostream& out, const std::vector<long long>& v);
+template std::ostream& operator<<(std::ostream& out, const std::vector<std::string>& v);
