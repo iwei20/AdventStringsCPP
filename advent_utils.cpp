@@ -129,7 +129,7 @@ template std::string vtos<>(const std::vector<std::string>& v, const std::string
 
 template <typename T>
 std::ostream& operator<<(std::ostream& out, const std::vector<T>& v) {
-    out << vtos(v, " ");
+    out << vtos(v, ' ');
     return out;
 }
 
