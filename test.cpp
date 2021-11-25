@@ -31,4 +31,14 @@ int main() {
         result += (long long)c;
     }
     cout << result << "\n";
+
+    vector<int> test5 = {1, 2, 3, 4, 5};
+    vector<int> test1 = {1};
+    vector<int> test0 = {};
+    vector<double> testd = {1.1, 5.4, 329309};
+
+    cout << test5 << "\n";
+    cout << test1 << "\n";
+    cout << test0 << "\n";
+    cout << testd << "\n";
 }
