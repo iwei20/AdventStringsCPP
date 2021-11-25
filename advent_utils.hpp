@@ -67,13 +67,11 @@ namespace smanip {
 
 }
 
-namespace misc {
-    template <typename T>
-    std::string vtos(const std::vector<T>& v, char delimiter);
+template <typename T>
+std::string vtos(const std::vector<T>& v, char delimiter);
 
-    template <typename T>
-    std::string vtos(const std::vector<T>& v, const std::string& delimiter);
+template <typename T>
+std::string vtos(const std::vector<T>& v, const std::string& delimiter);
 
-    template <typename T>
-    std::ostream& operator<<(std::ostream& out, const std::vector<T>& v);
-}
+template <typename T>
+std::ostream& operator<<(std::ostream& out, const std::vector<T>& v);

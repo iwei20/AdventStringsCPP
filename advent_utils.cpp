@@ -92,7 +92,7 @@ std::string smanip::slice(
 }
 
 template <typename T>
-std::string misc::vtos(const std::vector<T>& v, char delimiter) {
+std::string vtos(const std::vector<T>& v, char delimiter) {
     std::stringstream ss;
     for (std::size_t i = 0; i < v.size(); ++i) {
         ss << v[i];
@@ -103,14 +103,14 @@ std::string misc::vtos(const std::vector<T>& v, char delimiter) {
     return ss.str();
 }
 
-template std::string misc::vtos(const std::vector<int>& v, char delimiter);
-template std::string misc::vtos(const std::vector<char>& v, char delimiter);
-template std::string misc::vtos(const std::vector<double>& v, char delimiter);
-template std::string misc::vtos(const std::vector<long long>& v, char delimiter);
-template std::string misc::vtos(const std::vector<std::string>& v, char delimiter);
+template std::string vtos<>(const std::vector<int>& v, char delimiter);
+template std::string vtos<>(const std::vector<char>& v, char delimiter);
+template std::string vtos<>(const std::vector<double>& v, char delimiter);
+template std::string vtos<>(const std::vector<long long>& v, char delimiter);
+template std::string vtos<>(const std::vector<std::string>& v, char delimiter);
 
 template <typename T>
-std::string misc::vtos(const std::vector<T>& v, const std::string& delimiter) {
+std::string vtos(const std::vector<T>& v, const std::string& delimiter) {
     std::stringstream ss;
     for (std::size_t i = 0; i < v.size(); ++i) {
         ss << v[i];
@@ -121,20 +121,20 @@ std::string misc::vtos(const std::vector<T>& v, const std::string& delimiter) {
     return ss.str();
 }
 
-template std::string misc::vtos(const std::vector<int>& v, const std::string& delimiter);
-template std::string misc::vtos(const std::vector<char>& v, const std::string& delimiter);
-template std::string misc::vtos(const std::vector<double>& v, const std::string& delimiter);
-template std::string misc::vtos(const std::vector<long long>& v, const std::string& delimiter);
-template std::string misc::vtos(const std::vector<std::string>& v, const std::string& delimiter);
+template std::string vtos<>(const std::vector<int>& v, const std::string& delimiter);
+template std::string vtos<>(const std::vector<char>& v, const std::string& delimiter);
+template std::string vtos<>(const std::vector<double>& v, const std::string& delimiter);
+template std::string vtos<>(const std::vector<long long>& v, const std::string& delimiter);
+template std::string vtos<>(const std::vector<std::string>& v, const std::string& delimiter);
 
 template <typename T>
-std::ostream& misc::operator<<(std::ostream& out, const std::vector<T>& v) {
+std::ostream& operator<<(std::ostream& out, const std::vector<T>& v) {
     out << vtos(v, " ");
     return out;
 }
 
-template std::ostream& misc::operator<<(std::ostream& out, const std::vector<int>& v);
-template std::ostream& misc::operator<<(std::ostream& out, const std::vector<char>& v);
-template std::ostream& misc::operator<<(std::ostream& out, const std::vector<double>& v);
-template std::ostream& misc::operator<<(std::ostream& out, const std::vector<long long>& v);
-template std::ostream& misc::operator<<(std::ostream& out, const std::vector<std::string>& v);
+template std::ostream& operator<<<>(std::ostream& out, const std::vector<int>& v);
+template std::ostream& operator<<<>(std::ostream& out, const std::vector<char>& v);
+template std::ostream& operator<<<>(std::ostream& out, const std::vector<double>& v);
+template std::ostream& operator<<<>(std::ostream& out, const std::vector<long long>& v);
+template std::ostream& operator<<<>(std::ostream& out, const std::vector<std::string>& v);
