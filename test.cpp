@@ -3,11 +3,13 @@
 
 using namespace std;
 
-int main() {
+void print_test_count_char() {
     cout << smanip::count("Hello", 'c') << "\n";
     cout << smanip::count("Hello", 'h') << "\n";
     cout << smanip::count("Hello", 'o') << "\n";
+}
 
+void print_test_slice() {
     cout << smanip::slice("Hello", 1, nullopt, 2) << "\n";
     cout << smanip::slice("Hello", 1, nullopt, nullopt) << "\n";
     cout << smanip::slice("Hello", nullopt, nullopt, nullopt) << "\n";
@@ -18,7 +20,9 @@ int main() {
     cout << smanip::slice("Hello", -3, nullopt, -1) << "\n";
     cout << smanip::slice("Hello", -4, -3, -1) << "\n";
     cout << smanip::slice("Hello", nullopt, -4, -3) << "\n";
+}
 
+void print_test_hash_single() {
     cout << smanip::hash_str("OKOKOKOK") << "\n";
     long long result_single = (((256LL * 'O' + 'K') * 256LL * 256LL * 256LL * 256LL * 256LL * 256LL + (256LL * 'O' + 'K') * 256LL * 256LL * 256LL * 256LL + (256LL * 'O' + 'K') * 256LL * 256LL + (256LL * 'O' + 'K')) % (long long) (1e9 + 9)); 
     cout << result_single << "\n"; 
@@ -31,7 +35,9 @@ int main() {
         result += (long long)c;
     }
     cout << result << "\n";
+}
 
+void print_test_vector_out() {
     vector<int> test5 = {1, 2, 3, 4, 5};
     vector<int> test1 = {1};
     vector<int> test0 = {};
@@ -41,10 +47,16 @@ int main() {
     cout << test1 << "\n";
     cout << test0 << "\n";
     cout << testd << "\n";
+}
 
+void print_test_hash_rolling() {
     cout << smanip::hash_rolling("OKOKOKOK") << "\n";
+}
 
+void print_test_vector_in() {
     vector<int> numbers;
     cin >> numbers;
     cout << numbers << "\n";
 }
+
+int main() {}
