@@ -53,6 +53,14 @@ void print_test_hash_rolling() {
     cout << smanip::hash_rolling("OKOKOKOK") << "\n";
 }
 
+void print_test_vector_in_single() {
+    vector<string> stuff;
+    vector<int> numbers;
+    cin > stuff > stuff > numbers > stuff;
+    cout << stuff << "\n";
+    cout << numbers << "\n";
+}
+
 void print_test_vector_in() {
     vector<string> numbers;
     cin >> numbers;
@@ -73,5 +81,5 @@ void print_test_vector_in_limit() {
 }
 
 int main() {
-    
+    print_test_vector_in_single();
 }
