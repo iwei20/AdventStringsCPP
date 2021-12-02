@@ -77,4 +77,4 @@ template <typename T>
 std::ostream& operator<<(std::ostream& out, const std::vector<T>& v);
 
 template <typename T>
-std::istream& operator>>(std::istream& in, const std::vector<T>& v);
+std::istream& operator>>(std::istream& in, std::vector<T>& v);
