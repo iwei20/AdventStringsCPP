@@ -147,3 +147,9 @@ std::istream& operator>>(std::istream& in, std::vector<T>& v) {
     }
     return in;
 }
+
+template std::istream& operator>><>(std::istream& in, std::vector<int>& v);
+template std::istream& operator>><>(std::istream& in, std::vector<char>& v);
+template std::istream& operator>><>(std::istream& in, std::vector<double>& v);
+template std::istream& operator>><>(std::istream& in, std::vector<long long>& v);
+template std::istream& operator>><>(std::istream& in, std::vector<std::string>& v); 
