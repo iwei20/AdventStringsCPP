@@ -60,6 +60,18 @@ void print_test_vector_in() {
     cout << numbers << "\n";
 }
 
+void print_test_vector_in_limit() {
+    vector<string> stuff;
+    vector_read(cin, stuff, 5);
+    cout << stuff << "\n";
+    vector<int> numbers;
+    vector_read(cin, numbers, 5);
+    cout << numbers << "\n";
+    vector<char> letters;
+    vector_read(cin, letters, 3);
+    cout << letters << "\n";
+}
+
 int main() {
-    print_test_vector_in();
+    
 }
