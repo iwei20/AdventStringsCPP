@@ -54,9 +54,12 @@ void print_test_hash_rolling() {
 }
 
 void print_test_vector_in() {
-    vector<int> numbers;
+    vector<string> numbers;
     cin >> numbers;
+    numbers[2].push_back('e');
     cout << numbers << "\n";
 }
 
-int main() {}
+int main() {
+    print_test_vector_in();
+}
