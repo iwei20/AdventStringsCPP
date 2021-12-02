@@ -41,7 +41,7 @@ std::string smanip::slice(
         const std::optional<int>& step) {
 
     // Implementation taken from CPython
-    int length = s.size();
+    int length = (int) s.size();
     int m_start, m_stop; 
 
     int m_step = step.value_or(1);
@@ -85,7 +85,7 @@ std::string smanip::slice(
 
     std::string result;
     result.resize(slicelength);
-    for (std::size_t pos = m_start, i = 0; i < slicelength; pos += m_step, ++i) {
+    for (std::size_t pos = m_start, i = 0; i < (std::size_t) slicelength; pos += m_step, ++i) {
         result[i] = s[pos];
     }
     return result;
