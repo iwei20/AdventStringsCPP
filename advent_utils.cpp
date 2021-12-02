@@ -138,3 +138,12 @@ template std::ostream& operator<<<>(std::ostream& out, const std::vector<char>& 
 template std::ostream& operator<<<>(std::ostream& out, const std::vector<double>& v);
 template std::ostream& operator<<<>(std::ostream& out, const std::vector<long long>& v);
 template std::ostream& operator<<<>(std::ostream& out, const std::vector<std::string>& v);
+
+template <typename T>
+std::istream& operator>>(std::istream& in, std::vector<T>& v) {
+    T t;
+    while(in >> t) {
+        v.push_back(t);
+    }
+    return in;
+}
