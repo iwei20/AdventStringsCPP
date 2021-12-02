@@ -80,6 +80,23 @@ void print_test_vector_in_limit() {
     cout << letters << "\n";
 }
 
+void print_test_occurrences_count() {
+    cout << smanip::occurrences("OKOKOKOK", "OK") << "\n";
+    cout << smanip::count("OKOKOKOK", "OK") << "\n";
+    cout << smanip::occurrences("OKHELLOOK", "OK") << "\n";
+    cout << smanip::count("OKHELLOOK", "OK") << "\n";
+    cout << smanip::occurrences("O", "OK") << "\n";
+    cout << smanip::count("O", "OK") << "\n";
+    cout << smanip::occurrences("", "OK") << "\n";
+    cout << smanip::count("", "OK") << "\n";
+    cout << smanip::occurrences("OK", "") << "\n";
+    cout << smanip::count("OK", "") << "\n";
+    cout << smanip::occurrences("", "") << "\n";
+    cout << smanip::count("", "") << "\n";
+    cout << smanip::occurrences("OK", 'O') << "\n";
+    cout << smanip::count("OK", 'O') << "\n";
+}
+
 int main() {
-    print_test_slice();
+    print_test_occurrences_count();
 }
