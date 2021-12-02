@@ -10,16 +10,16 @@ void print_test_count_char() {
 }
 
 void print_test_slice() {
-    cout << smanip::slice("Hello", 1, nullopt, 2) << "\n";
-    cout << smanip::slice("Hello", 1, nullopt, nullopt) << "\n";
-    cout << smanip::slice("Hello", nullopt, nullopt, nullopt) << "\n";
-    cout << smanip::slice("Hello", nullopt, nullopt, -1) << "\n";
-    cout << smanip::slice("Hello", -3, nullopt, nullopt) << "\n";
-    cout << smanip::slice("Hello", nullopt, -1, nullopt) << "\n";
-    cout << smanip::slice("Hello", -3, 0, -1) << "\n";
-    cout << smanip::slice("Hello", -3, nullopt, -1) << "\n";
-    cout << smanip::slice("Hello", -4, -3, -1) << "\n";
-    cout << smanip::slice("Hello", nullopt, -4, -3) << "\n";
+    cout << smanip::slice("Hello", 1, nullopt, 2) << "\n"; // el
+    cout << smanip::slice("Hello", 1, nullopt, nullopt) << "\n"; // ello
+    cout << smanip::slice("Hello", nullopt, nullopt, nullopt) << "\n"; // Hello
+    cout << smanip::slice("Hello", nullopt, nullopt, -1) << "\n"; // olleH
+    cout << smanip::slice("Hello", -3, nullopt, nullopt) << "\n"; // llo
+    cout << smanip::slice("Hello", nullopt, -1, nullopt) << "\n"; // Hell
+    cout << smanip::slice("Hello", -3, 0, -1) << "\n"; // le
+    cout << smanip::slice("Hello", -3, nullopt, -1) << "\n"; // leH
+    cout << smanip::slice("Hello", -4, -3, -1) << "\n"; // [Empty]
+    cout << smanip::slice("Hello", nullopt, -4, -3) << "\n"; // o
 }
 
 void print_test_hash_single() {
@@ -81,5 +81,5 @@ void print_test_vector_in_limit() {
 }
 
 int main() {
-    print_test_vector_in_single();
+    print_test_slice();
 }
