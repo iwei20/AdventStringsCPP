@@ -43,4 +43,8 @@ int main() {
     cout << testd << "\n";
 
     cout << smanip::hash_rolling("OKOKOKOK") << "\n";
+
+    vector<int> numbers;
+    cin >> numbers;
+    cout << numbers << "\n";
 }
