@@ -14,6 +14,9 @@ namespace smanip {
     std::size_t count(const std::string& s, char c);
     std::size_t count(const std::string& s, const std::string& substr);
 
+    std::vector<std::size_t> occurrences(const std::string& s, char c);
+    std::vector<std::size_t> occurrences(const std::string& s, const std::string& substr);
+
     long long hash_str(const std::string& s, const long long modulo = 1e9 + 9);
     std::vector<long long> hash_rolling(const std::string& s, const long long modulo = 1e9 + 9);
 
