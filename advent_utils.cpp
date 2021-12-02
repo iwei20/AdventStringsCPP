@@ -4,6 +4,7 @@
 #include <vector>
 #include <sstream>
 
+constexpr long long ALPHABET_SIZE = 256;
 std::size_t smanip::count(const std::string& s, char c) {
     std::size_t result = 0;
     for (char ch : s) {
@@ -12,13 +13,12 @@ std::size_t smanip::count(const std::string& s, char c) {
     return result;
 }
 
-constexpr long long ALPHABET_SIZE = 256;
 long long smanip::hash_str(const std::string& s, const long long modulo) {
     long long result = 0;
     for (char c : s) {
         result *= ALPHABET_SIZE;
-        result %= modulo;
         result += (long long)c;
+        result %= modulo;
     }
     return result;
 }
@@ -28,8 +28,8 @@ std::vector<long long> smanip::hash_rolling(const std::string& s, const long lon
     result[0] = s[0] % modulo;
     for (std::size_t i = 1; i < s.size(); ++i) {
         result[i] = result[i - 1] * ALPHABET_SIZE;
-        result[i] %= modulo;
         result[i] += (long long)s[i];
+        result[i] %= modulo;
     }
     return result;
 }
