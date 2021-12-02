@@ -16,6 +16,8 @@ std::size_t smanip::count(const std::string& s, char c) {
 
 std::size_t smanip::count(const std::string& s, const std::string& substr) {
     std::size_t result = 0;
+    if(substr.size() > s.size()) return result;
+    if(s.size() == 0 || substr.size() == 0) return result;
 
     long long match_pattern = hash_str(substr, HASH_MOD);
     std::vector<long long> patterns = hash_rolling(s, HASH_MOD);
@@ -39,6 +41,8 @@ std::vector<std::size_t> smanip::occurrences(const std::string& s, char c) {
 
 std::vector<std::size_t> smanip::occurrences(const std::string& s, const std::string& substr) {
     std::vector<std::size_t> result;
+    if(substr.size() > s.size()) return result;
+    if(s.size() == 0 || substr.size() == 0) return result;
 
     long long match_pattern = hash_str(substr, HASH_MOD);
     std::vector<long long> patterns = hash_rolling(s, HASH_MOD);
