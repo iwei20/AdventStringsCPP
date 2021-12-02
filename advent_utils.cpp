@@ -153,3 +153,19 @@ template std::istream& operator>><>(std::istream& in, std::vector<char>& v);
 template std::istream& operator>><>(std::istream& in, std::vector<double>& v);
 template std::istream& operator>><>(std::istream& in, std::vector<long long>& v);
 template std::istream& operator>><>(std::istream& in, std::vector<std::string>& v); 
+
+template <typename T>
+std::istream& vector_read(std::istream& in, std::vector<T>& v, std::size_t n) {
+    T t;
+    for (std::size_t i = 0; i < n; ++i) {
+        in >> t;
+        v.push_back(t);
+    }
+    return in;
+}
+
+template std::istream& vector_read<>(std::istream& in, std::vector<int>& v, std::size_t n);
+template std::istream& vector_read<>(std::istream& in, std::vector<char>& v, std::size_t n);
+template std::istream& vector_read<>(std::istream& in, std::vector<double>& v, std::size_t n);
+template std::istream& vector_read<>(std::istream& in, std::vector<long long>& v, std::size_t n);
+template std::istream& vector_read<>(std::istream& in, std::vector<std::string>& v, std::size_t n);
